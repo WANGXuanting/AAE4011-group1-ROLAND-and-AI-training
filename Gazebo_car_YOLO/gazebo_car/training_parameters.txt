@@ -1,0 +1,47 @@
+=== TRAINING SETTINGS ===
+epochs: 150
+imgsz: 1280
+batch: 10
+workers: 18
+device: cuda:0
+seed: 42
+patience: 100
+save_period: 0
+project: runs/detect
+name: gazebo_car
+optimizer: MuSGD
+rect: False
+amp: True
+half: True
+lr0: 0.01
+lrf: 0.0005
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 5.0
+warmup_bias_lr: 0.1
+box: 7.5
+cls: 0.5
+dropout: 0.25
+verbose: True
+cache: False
+close_mosaic: 30
+cos_lr: True
+
+=== AUGMENTATION SETTINGS ===
+hsv_h: 0
+hsv_s: 0
+hsv_v: 0
+degrees: 45.0
+translate: 0.2
+scale: 0.3
+shear: 0.0
+perspective: 0.0002
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.25
+cutmix: 0.5
+
+=== EXTRA INFO ===
+model: yolo26n.pt
+data: datasets/datasetPU/auto.yaml
