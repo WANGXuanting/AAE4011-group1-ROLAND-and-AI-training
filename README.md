@@ -70,12 +70,12 @@ Control the Jackal robot using a keypad.
 
 As described in the project presentation (Methodology → Data Collection, pages 13–14):  
 
-1) In Gazebo/RViz, switch to the UAV first-person camera view (/camera/image_raw topic).  
-2) Record the screen using OBS Studio or rosbag record /camera/image_raw /tf /ekf/pose to capture:  
+*  In Gazebo/RViz, switch to the UAV first-person camera view (/camera/image_raw topic).  
+*  Record the screen using OBS Studio or rosbag record /camera/image_raw /tf /ekf/pose to capture:  
    First-person video (time-stamped)  
    3D coordinates of the ground vehicle (x, y, z) published via tf / EKF  
-3) Extract frames from the recorded video using tools such as Ezgif.  
-4) Synchronize 3D labels using the timestamp alignment between video frames and pose data.  
+*  Extract frames from the recorded video using tools such as Ezgif.  
+*  Synchronize 3D labels using the timestamp alignment between video frames and pose data.  
 
 Example demonstration videos (same as presentation):  
 https://youtu.be/HdqZ7y4VsfE   
@@ -99,6 +99,16 @@ Run inference demo on https://www.youtube.com/watch?v=W2YqDLe378M to verify real
 ## Dependencies
 
 All Python dependencies are listed in requirements.txt.  
+
+
+## Components
+
+- ROS-YOLO using OpenCV/OpenVINO code: from [here](https://github.com/engcang/ros-yolo-sort/tree/master/YOLO_and_ROS_ver)  
+- Jackal Gazebo model: from [here](https://github.com/jackal)  
+- Drone and Jackal controll joystick code: from [here](https://github.com/engcang/mavros-gazebo-application/blob/master/mavros_joy_controller.py) , also refer [here](https://github.com/engcang/mavros-gazebo-application/blob/master/README.md#mission--joystick-controller---supports-kobuki-and-jackal)  
+- UWB Gazebo sensor plugin and message from uwb gazebo [plugin](https://github.com/valentinbarral/gazebosensorplugins) and [uwb ROS msg](https://github.com/GTEC-UDC/rosmsgs)  
+- [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) frame_id and OpenCV edited version from [here](https://github.com/engcang/vins-application#-vins-fusion-1)  * camera_models package is edited to be compatible with OpenCV4  
+- Gazebo [map](https://github.com/engcang/gazebo_maps) 
     
 
 ## Results & Demonstration
