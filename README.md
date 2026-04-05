@@ -93,7 +93,7 @@ pip install -r requirements.txt
 python train_script.py --data dataset/auto.yaml --model yolo26n.pt # Train the model  
 ```
 
-Run inference demo on https://youtu.be/PPOhmMO90x8 to verify real-time car detection.
+Run inference demo on https://www.youtube.com/watch?v=W2YqDLe378M to verify real-time car detection.
     
 
 ## Dependencies
